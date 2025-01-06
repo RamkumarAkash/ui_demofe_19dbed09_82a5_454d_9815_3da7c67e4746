@@ -2,6 +2,10 @@ import { defineConfig, transformWithEsbuild } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/demofe/html',
+  build: {
+    outDir: 'build', 
+  },
   plugins: [
     {
       name: 'treat-js-files-as-jsx',
