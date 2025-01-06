@@ -1,7 +1,7 @@
-FROM replicacia/react_base_image:2 AS react_base
-ENV NODE_ENV=production
+FROM node:20 AS react_base
 WORKDIR /usr/src/app
 COPY . .
+RUN npm install
 RUN npm run build
 
 # production environment
